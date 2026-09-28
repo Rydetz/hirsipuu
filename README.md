@@ -11,17 +11,8 @@
 # OHJ2 Ryhmätyö: Peliprojektin tekijät:
 # Valtteri Poimala ja Luca Tanriverdi Tivi25A
 
-# Tiedoston rungon tehnyt:
-# Valtteri
-# README.md tehnyt:
-# Luca
-# sanat.csv tiedoston tehnyt:
-# Valtteri
-# sanat.csv tiedoston sanat lisännyt:
-# Luca
-# Hirsipuu luokan tehnyt:
-# Valtteri
-# OikeaVastaus luokan tehnyt:
-# Luca
-# Vaaravastaus luokan tehnyt:
-# Valtteri
+# Työnjako
+# Valtteri:
+# Luonut tiedostot, tehnyt main.py tiedoston rungon, Hirsipuu luokan ja VaaraVastaus luokan.
+# Luca:
+# Kirjoittanut README tiedoston, lisännyt sanat sanat.csv tiedostoon ja tehnyt OikeaVastaus luokan.
