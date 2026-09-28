@@ -1,5 +1,5 @@
 import random
-#Apu funktiot
+#Apufunktiot
 def hae_sanat():
     with open("sanat.csv", "r", newline="") as tiedosto:
         teksti = tiedosto.read()
@@ -30,7 +30,7 @@ class Hirsipuu:
         ]
 #Kehon osat
         osat = [
-            (2, 1, "O."),   #Pää
+            (2, 1, "O."),  #Pää
             (3, 2, "|"),   #Vartalo
             (3, 1, "/"),   #Vasen käsi
             (3, 3, "\\"),  #Oikea käsi
@@ -72,29 +72,28 @@ class Hirsipuu:
             print("HIRSIPUU")
             self.piirra_hirsipuu()
             print(naytettava)
-            print('‾ ' * len(self.oikea_sana))
-            #merkataan sanan kirjainten määrät yläviivalla
+            print('‾ ' * len(self.oikea_sana)) #Merkataan sanan kirjainten määrät viivalla
             
             if len(self.vaarat_kirjaimet) > 0:
                 print(*self.vaarat_kirjaimet, sep=", ")
             
             kirjain = input("Arvaa kirjain tai sana: ")
             
-            if len(kirjain) == 1:
+            if len(kirjain) == 1: #Jos arvaa kirjainta
                 self.arvaukset += 1
                 self.arvaus(kirjain)
                 if set(self.oikea_sana.lower()) <= set(self.oikeat_kirjaimet):
                     print("Voitit Pelin, GG!")
                     return
                 
-            elif len(kirjain) > 1:
+            elif len(kirjain) > 1: #Jos arvaa sanaa
                 if kirjain.lower() == self.oikea_sana.lower():
                     print("Voitit Pelin, GG!")
                     return
                 else:
                     VaaraVastaus().handlaa(self, kirjain.lower())
             else:
-                print("Nyt bugasit pelin kunnolla, yritäppä uudestaan!")
+                print("Nyt bugasit pelin kunnolla, yritäppä uudestaan!") #Bugien sattuessa printtaa
                 
         print("Hävisit pelin!")
         self.piirra_hirsipuu()
