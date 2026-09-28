@@ -76,7 +76,7 @@ class Hirsipuu:
             print("HIRSIPUU")
             self.piirra_hirsipuu()
             print(naytettava)
-            print('- ' * len(self.oikea_sana))
+            print('− ' * len(self.oikea_sana))
             
             if len(self.vaarat_kirjaimet) > 0:
                 print(*self.vaarat_kirjaimet, sep=", ")
