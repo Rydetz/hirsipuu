@@ -30,9 +30,18 @@ class Hirsipuu:
         else:
             VaaraVastaus().handlaa(self, kirjain)
 
-        # def suorita(self):
-            # while self.arvaukset < 6:
-                # naytettava
+        def suorita(self):
+            while self.arvaukset < 6:
+                naytettava = ""
+
+                for kirjain in self.oikea_sana:
+                    if kirjain.lower() in self.oikeat_kirjaimet:
+                        naytettava += kirjain + " "
+                    else:
+                        naytettava += "_ "
+
+                print("HIRSIPUU")
+                print(naytettava)
 
 class OikeaVastaus:
     def handlaa(self, peli, kirjain):
