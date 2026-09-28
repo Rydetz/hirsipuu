@@ -2,7 +2,7 @@ import random
 
 #Apu functiot
 def hae_sanat():
-    with open("*sanat.csv", encoding="utf-8", newline="") as tiedosto:
+    with open("sanat.csv", encoding="utf-8", newline="") as tiedosto:
         teksti = tiedosto.read()
 
     sanat = teksti.splitlines()
