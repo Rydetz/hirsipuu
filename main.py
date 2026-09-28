@@ -6,7 +6,7 @@ def hae_sanat():
         teksti = tiedosto.read()
 
     sanat = teksti.splitlines()
-    #sanat = ["pieksämäki"]
+    # sanat = ["pieksämäki"]
     return sanat
 
 def Arvattava_sana():
@@ -96,7 +96,10 @@ class Hirsipuu:
             else:
                 print("Voit antaa vain yhden kirjaimen kerrallaan!")
                 
-                
+        print("Hävisit Pelin!")
+        self.piirra_hirsipuu()
+        print(naytettava)        
+        print(self.oikea_sana)
             
 
 class OikeaVastaus:
