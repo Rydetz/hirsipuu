@@ -65,7 +65,7 @@ class Hirsipuu:
 
     def suorita(self):
         while self.vaarat_arvaukset < 6:
-            naytettava = ""
+            naytettava = " "
 
             for kirjain in self.oikea_sana:
                 if kirjain.lower() in self.oikeat_kirjaimet:
@@ -76,7 +76,7 @@ class Hirsipuu:
             print("HIRSIPUU")
             self.piirra_hirsipuu()
             print(naytettava)
-            print('−' * len(self.oikea_sana))
+            print('− ' * len(self.oikea_sana))
             
             if len(self.vaarat_kirjaimet) > 0:
                 print(*self.vaarat_kirjaimet, sep=", ")
