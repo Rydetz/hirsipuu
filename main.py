@@ -30,7 +30,7 @@ class Hirsipuu:
         ]
 #Kehon osat
         osat = [
-            (2, 1, "O"),   #Pää
+            (2, 1, "O."),   #Pää
             (3, 2, "|"),   #Vartalo
             (3, 1, "/"),   #Vasen käsi
             (3, 3, "\\"),  #Oikea käsi
