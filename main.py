@@ -1,9 +1,15 @@
 import random
+import csv
 
-Arvattavat = ["Omena", "Auto", "Tietokone"]
+def hae_sanat():
+    with open("sanat.csv", encoding="utf-8", newline="") as tiedosto:
+        teksti = tiedosto.read()
+
+    sanat = teksti.split(";")
+    return sanat
 
 def Arvattava_sana():
-  return random.choice(Arvattavat)
+    return random.choice(hae_sanat)
 
 
 class Hirsipuu:
