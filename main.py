@@ -30,6 +30,10 @@ class Hirsipuu:
         else:
             VaaraVastaus().handlaa(self, kirjain)
 
+        # def suorita(self):
+            # while self.arvaukset < 6:
+                # naytettava
+
 class OikeaVastaus:
     def handlaa(self, peli, kirjain):
         peli.oikeat_kirjaimet.append(kirjain)
