@@ -71,7 +71,7 @@ class Hirsipuu:
                 if kirjain.lower() in self.oikeat_kirjaimet:
                     naytettava += kirjain.lower() + " "
                 else:
-                    naytettava += "_ "
+                    naytettava += "- "
 
             print("HIRSIPUU")
             self.piirra_hirsipuu()
