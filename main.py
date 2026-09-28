@@ -11,6 +11,16 @@ def hae_sanat():
 def Arvattava_sana():
     return random.choice(hae_sanat)
 
+class OikeaVastaus:
+    def handlaa(self, peli, kirjain):
+        peli.oikeat_kirjaimet.append(kirjain)
+        print("Oikein!")
+
+class VaaraVastaus:
+    def handlaa(self, peli, kirjain):
+        peli.vaarat_kirjaimet.append(kirjain)
+        peli.arvaukset += 1
+        print("Väärin!")
 
 class Hirsipuu:
     def __init__(self):
