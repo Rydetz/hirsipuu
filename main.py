@@ -61,7 +61,7 @@ class Hirsipuu:
 
     def suorita(self):
         while self.vaarat_arvaukset < 6:
-            naytettava = " "
+            naytettava = ""
 
             for kirjain in self.oikea_sana:
                 if kirjain.lower() in self.oikeat_kirjaimet:
@@ -83,11 +83,14 @@ class Hirsipuu:
             if len(kirjain) == 1:
                 self.arvaukset += 1
                 self.arvaus(kirjain)
+                if set(self.oikea_sana.lower()) <= set(self.oikeat_kirjaimet):
+                    print("Voitit Pelin, GG!")
+                    return
                 
             elif len(kirjain) > 1:
                 if kirjain.lower() == self.oikea_sana.lower():
                     print("Voitit Pelin, GG!")
-                    break
+                    return
                 else:
                     VaaraVastaus().handlaa(self, kirjain.lower())
             else:
