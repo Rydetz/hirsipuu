@@ -53,7 +53,7 @@ class Hirsipuu:
         kirjain = kirjain.lower()
 
         if kirjain in self.oikeat_kirjaimet or kirjain in self.vaarat_kirjaimet:
-            print("Tämä kirjain on arvattu jo")
+            print("Tämä kirjain on arvattu jo!")
         elif kirjain in self.oikea_sana.lower():
             OikeaVastaus().handlaa(self, kirjain)
         else:
@@ -78,7 +78,7 @@ class Hirsipuu:
             if len(self.vaarat_kirjaimet) > 0:
                 print(*self.vaarat_kirjaimet, sep=", ")
             
-            kirjain = input("Arvaa kirjain tai sana : ")
+            kirjain = input("Arvaa kirjain tai sana: ")
             
             if len(kirjain) == 1:
                 self.arvaukset += 1
@@ -93,7 +93,7 @@ class Hirsipuu:
             else:
                 print("Nyt bugasit pelin kunnolla, yritäppä uudestaan!")
                 
-        print("Hävisit Pelin!")
+        print("Hävisit pelin!")
         self.piirra_hirsipuu()
         print(naytettava)        
         print(self.oikea_sana)
