@@ -20,6 +20,38 @@ class Hirsipuu:
         self.oikea_sana = Arvattava_sana()
         self.oikeat_kirjaimet = []
         self.vaarat_kirjaimet = []
+        
+    def piirra_hirsipuu(self):
+        base = [
+            "  +---+",
+            "  |   |",
+            "      |",
+            "      |",
+            "      |",
+            "      |",
+            "========="
+        ]
+
+        osat = [
+            (2, 2, "O"),   # pää
+            (3, 2, "|"),   # vartalo
+            (3, 1, "/"),   # vas käsi
+            (3, 3, "\\"),  # oik käsi
+            (4, 1, "/"),   # vas jalka
+            (4, 3, "\\")   # oik jalka
+        ]
+
+        rivit = []
+        for rivi in base:
+            rivit.append(list(rivi))
+
+        for i in range(self.vaarat_arvaukset):
+            rivin_numero, kohta, merkki = osat[i]
+            rivit[rivin_numero][kohta] = merkki
+
+        for rivi in rivit:
+            print("".join(rivi))
+
 
     def arvaus(self, kirjain):
         kirjain = kirjain.lower()
@@ -42,6 +74,7 @@ class Hirsipuu:
                     naytettava += "_ "
 
             print("HIRSIPUU")
+            self.piirra_hirsipuu()
             print(naytettava)
             print('_ ' * len(self.oikea_sana))
             
@@ -51,10 +84,13 @@ class Hirsipuu:
             if len(kirjain) == 1:
                 self.arvaukset += 1
                 self.arvaus(kirjain)
+                
             elif len(kirjain) < 1:
-                if kirjain == self.oikea_sana:
+                if kirjain.lower() == self.oikea_sana.lower():
                     print("Voitit Pelin, Oot hullu demoni!")
-                    break 
+                    break
+                else:
+                    VaaraVastaus().handlaa(self, kirjain.lower())
                 # print("Voit antaa vain yhden kirjaimen kerrallaan!")
                 
                 
@@ -65,11 +101,13 @@ class OikeaVastaus:
         peli.oikeat_kirjaimet.append(kirjain)
         print("Oikein!")
 
+
 class VaaraVastaus:
     def handlaa(self, peli, kirjain):
         peli.vaarat_kirjaimet.append(kirjain)
         peli.vaarat_arvaukset += 1
         print("Väärin!")
+
 
 testi = Hirsipuu()
 testi.suorita()
