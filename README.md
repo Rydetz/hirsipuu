@@ -1,5 +1,6 @@
-# OHJ2 # 631 Ryhmätyö: Peliprojekti (Hirsipuu)
-# Sanakirja generoi satunnaisen sanan sanat.csv tiedostosta ja muuttaa sen alaviivoiksi
+# OHJ2 Ryhmätyö: Peliprojekti
+# Hirsipuu
+# Sanakirja valitsee satunnaisen sanan sanat.csv tiedostosta ja muuttaa sen alaviivoiksi
 # Esimerkki: sanassa "hirsipuu" on 8 kirjainta, eli tulostetaan 8 alaviivaa: "_ _ _ _ _ _ _ _" hirsipuun alapuolelle.
 
 # Pelaaja arvaa yhden kirjaimen kerrallaan, eli jos sana on "hirsipuu" ja pelaaja arvaa kirjaimen "h", ilmestyy "h" ensimmäisen alaviivan yläriville.
@@ -8,11 +9,11 @@
 
 # Peli päättyy, kun pelaaja arvaa sanan oikein tai arvaa väärän kirjaimen 6 kertaa.
 
-# OHJ2 Ryhmätyö: Peliprojektin tekijät:
+# OHJ2 Ryhmätyön tekijät:
 # Valtteri Poimala ja Luca Tanriverdi Tivi25A
 
 # Työnjako
 # Valtteri:
 # Luonut tiedostot, tehnyt main.py tiedoston rungon, Hirsipuu luokan ja VaaraVastaus luokan.
 # Luca:
-# Kirjoittanut README tiedoston, lisännyt sanat sanat.csv tiedostoon ja tehnyt OikeaVastaus luokan.
+# Suunnittellut hirsipuun toteutuksen, kirjoittanut README tiedoston, lisännyt sanat sanat.csv tiedostoon ja tehnyt OikeaVastaus luokan.
