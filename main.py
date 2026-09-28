@@ -13,7 +13,7 @@ def Arvattava_sana():
 
 
 class Hirsipuu:
-    def __init__(self)
+    def __init__(self):
         self.arvaukset = 0
         self.oikea_sana = Arvattava_sana()
         self.vaarat_kirjaimet = []
