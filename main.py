@@ -22,11 +22,11 @@ class Hirsipuu:
     def piirra_hirsipuu(self):
         base = [
             "  +---+",
-            "  |  |",
+            "  |  | ",
             "      |",
             "      |",
             "      |",
-            "     |",
+            "     | ",
             "========="
         ]
 #Kehon osat
