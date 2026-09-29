@@ -4,6 +4,7 @@ koodi
 data
 bugi
 haku
+java
 linkki
 verkko
 hiiri
@@ -15,12 +16,16 @@ solmu
 serveri
 reititin
 käyttäjä
+silmukka
 salasana
 kryptaus
 selain
+python
 matriisi
+funktio
 tietokone
 skripti
+luokka
 tietokanta
 palomuuri
 kyberuhka
@@ -34,6 +39,7 @@ verkkotunnus
 tietoliikenne
 käyttöliittymä
 virtuaalikone
+javascript
 avoinkoodi
 autentikointi
 laitteisto
