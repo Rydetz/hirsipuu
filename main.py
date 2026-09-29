@@ -1,7 +1,8 @@
 import random
 #Apufunktiot
 def hae_sanat():
-    with open("sanat.csv", "r", newline="") as tiedosto:
+    
+    with open("sanat.csv", "r", encoding="utf-8") as tiedosto:
         teksti = tiedosto.read()
 
     sanat = teksti.splitlines()
@@ -21,16 +22,16 @@ class Hirsipuu:
     def piirra_hirsipuu(self):
         base = [
             "  +---+",
-            "  |   |",
+            "  |  | ",
             "      |",
             "      |",
             "      |",
-            "      |",
+            "     | ",
             "========="
         ]
 #Kehon osat
         osat = [
-            (2, 1, "O."),  #Pää
+            (2, 1, "O"),  #Pää
             (3, 2, "|"),   #Vartalo
             (3, 1, "/"),   #Vasen käsi
             (3, 3, "\\"),  #Oikea käsi
