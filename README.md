@@ -17,5 +17,5 @@
 # Valtteri:
 # Luonut tiedostot, tehnyt main.py tiedoston rungon, Hirsipuu luokan ja VaaraVastaus luokan.
 # Luca:
-# Suunnittellut hirsipuun toteutuksen, kirjoittanut README tiedoston, lisännyt sanat sanat.csv tiedostoon ja tehnyt OikeaVastaus luokan.
+# Suunnittellut hirsipuun toteutuksen, kirjoittanut README tiedoston, etsinyt ja keksinyt sanoja sanat.csv tiedostoon ja tehnyt OikeaVastaus luokan.
 # Molemmat myös korjasivat bugeja ja muokkasivat koodia projektin aikana.
