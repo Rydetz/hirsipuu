@@ -10,6 +10,7 @@ def hae_sanat():
 
 def Arvattava_sana():
     return random.choice(hae_sanat())
+    
 #Pelin luokat
 class Hirsipuu:
     def __init__(self):
@@ -18,7 +19,8 @@ class Hirsipuu:
         self.oikea_sana = Arvattava_sana()
         self.oikeat_kirjaimet = []
         self.vaarat_kirjaimet = []
-#Hirsipuun rakenne
+        
+    #Hirsipuun rakenne
     def piirra_hirsipuu(self):
         base = [
             "  +---+",
@@ -29,7 +31,8 @@ class Hirsipuu:
             "     | ",
             "========="
         ]
-#Kehon osat
+        
+        #Kehon osat
         osat = [
             (2, 1, "O"),  #Pää
             (3, 2, "|"),   #Vartalo
@@ -49,6 +52,7 @@ class Hirsipuu:
 
         for rivi in rivit:
             print("".join(rivi))
+            
 
     def arvaus(self, kirjain):
         kirjain = kirjain.lower()
@@ -59,6 +63,7 @@ class Hirsipuu:
             OikeaVastaus().handlaa(self, kirjain)
         else:
             VaaraVastaus().handlaa(self, kirjain)
+            
 
     def suorita(self):
         while self.vaarat_arvaukset < 6:
@@ -73,7 +78,7 @@ class Hirsipuu:
             print("HIRSIPUU")
             self.piirra_hirsipuu()
             print(naytettava)
-            print('‾ ' * len(self.oikea_sana)) #Merkataan sanan kirjainten määrät viivalla
+            print('‾ ' * len(self.oikea_sana))
             
             if len(self.vaarat_kirjaimet) > 0:
                 print(*self.vaarat_kirjaimet, sep=", ")
@@ -100,6 +105,7 @@ class Hirsipuu:
         self.piirra_hirsipuu()
         print(naytettava)        
         print(self.oikea_sana)
+        
 
 class OikeaVastaus:
     def handlaa(self, peli, kirjain):
