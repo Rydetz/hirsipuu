@@ -3,12 +3,16 @@ import random
 #Apufunktiot
 def hae_sanat():
     with open("sanat.csv", "r", encoding="utf-8") as tiedosto:
-        teksti = tiedosto.read()
+        sanat = []
 
-    sanat = teksti.splitlines()
+        for rivi in tiedosto:
+            sana = rivi.strip()
+            if sana: 
+                sanat.append(sana)
+
     return sanat
 
-def Arvattava_sana():
+def arvattava_sana():
     return random.choice(hae_sanat())
 
 
@@ -17,7 +21,7 @@ class Hirsipuu:
     def __init__(self):
         self.arvaukset = 0
         self.vaarat_arvaukset = 0
-        self.oikea_sana = Arvattava_sana()
+        self.oikea_sana = arvattava_sana()
         self.oikeat_kirjaimet = []
         self.vaarat_kirjaimet = []
         
@@ -70,7 +74,11 @@ class Hirsipuu:
 
         if kirjain in self.oikeat_kirjaimet or kirjain in self.vaarat_kirjaimet:
             print("Tämä kirjain on arvattu jo!")
-        elif kirjain in self.oikea_sana.lower():
+            return
+
+        self.arvaukset += 1
+
+        if kirjain in self.oikea_sana.lower():
             self.oikea_vastaus(kirjain)
         else:
             self.vaara_vastaus(kirjain)
@@ -91,28 +99,41 @@ class Hirsipuu:
             print(naytettava)
             print('‾ ' * len(self.oikea_sana)) #Merkataan sanan kirjainten määrät viivalla
             
-            if len(self.vaarat_kirjaimet) > 0:
-                print(*self.vaarat_kirjaimet, sep=", ")
+            print(*self.vaarat_kirjaimet, sep=", ")
             
-            kirjain = input("Arvaa kirjain tai sana: ")
+            kirjain = input("Arvaa kirjain tai sana: ").strip().lower()
             
+            if len(kirjain) == 0:
+                print("Kokeilisit nyt edes jotain?") #jos inputti jää tyhjäksi
+                continue
+
+            if not kirjain.isalpha(): #tollanen tuli vastaa ja on aika hyvätäs, checkkaa onko kaikki kirjaimia. ei salli numeroit
+                print("Käytä vain kirjaimia!")
+                continue
+
             if len(kirjain) == 1: #Jos arvaa kirjainta
-                self.arvaukset += 1
                 self.arvaus(kirjain)
+
                 if set(self.oikea_sana.lower()) <= set(self.oikeat_kirjaimet):
-                    print(f"Oikea sana: {self.oikea_sana.lower()}")   
-                    print("Voitit Pelin, GG!")     
+                    print(f"Oikea sana: {self.oikea_sana.lower()}")
+                    print("Voitit Pelin, GG!")
+                    print(f"Arvausten määrä: {self.arvaukset}")
                     return
-                
+
             elif len(kirjain) > 1: #Jos arvaa sanaa
-                if kirjain.lower() == self.oikea_sana.lower():
-                    print(f"Oikea sana: {self.oikea_sana.lower()}")    
-                    print("Voitit Pelin, GG!")   
+                if kirjain in self.vaarat_kirjaimet:
+                    print("Tämä sana on jo arvattu")
+                    continue
+
+                self.arvaukset += 1
+
+                if kirjain == self.oikea_sana.lower():
+                    print(f"Oikea sana: {self.oikea_sana.lower()}")
+                    print("Voitit Pelin, GG!")
+                    print(f"Arvausten määrä: {self.arvaukset}")
                     return
                 else:
-                    self.vaara_vastaus(kirjain.lower())
-            else:
-                print("Kokeilisit nyt edes jotain?") #jos inputti jää tyhjäksi
+                    self.vaara_vastaus(kirjain)
                 
         #kun looppi ei pyöri enää eli vääriä vastauksia on liikaa
         print("Hävisit pelin!")
@@ -120,6 +141,7 @@ class Hirsipuu:
         print(naytettava)     
         print('‾ ' * len(self.oikea_sana))        
         print(self.oikea_sana)
+        print(f"Arvausten määrä: {self.arvaukset}")
 
 
 testi = Hirsipuu()
