@@ -36,7 +36,7 @@ class Hirsipuu:
         base = [
             "  +---+",
             "  |  | ",
-            "      |",
+            "     | ",
             "      |",
             "      |",
             "     | ",
@@ -45,12 +45,12 @@ class Hirsipuu:
         
         #Kehon osat
         osat = [
-            (2, 1, "O"),  #Pää
-            (3, 2, "|"),   #Vartalo
-            (3, 1, "/"),   #Vasen käsi
-            (3, 3, "\\"),  #Oikea käsi
-            (4, 1, "/"),   #Vasen jalka
-            (4, 3, "\\")   #Oikea jalka
+            (2, 2, "O."),  #Pää
+            (3, 3, "|"),   #Vartalo
+            (3, 2, "/"),   #Vasen käsi
+            (3, 4, "\\"),  #Oikea käsi
+            (4, 2, "/"),   #Vasen jalka
+            (4, 4, "\\")   #Oikea jalka
         ]
 
         rivit = []
@@ -117,8 +117,7 @@ class Hirsipuu:
         #kun looppi ei pyöri enää eli vääriä vastauksia on liikaa
         print("Hävisit pelin!")
         self.piirra_hirsipuu()
-        print(naytettava)
-        print('‾ ' * len(self.oikea_sana))
+        print(naytettava)        
         print(self.oikea_sana)
 
 
