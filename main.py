@@ -117,7 +117,8 @@ class Hirsipuu:
         #kun looppi ei pyöri enää eli vääriä vastauksia on liikaa
         print("Hävisit pelin!")
         self.piirra_hirsipuu()
-        print(naytettava)        
+        print(naytettava)     
+        print('‾ ' * len(self.oikea_sana))        
         print(self.oikea_sana)
 
 
