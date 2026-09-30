@@ -100,14 +100,14 @@ class Hirsipuu:
                 self.arvaukset += 1
                 self.arvaus(kirjain)
                 if set(self.oikea_sana.lower()) <= set(self.oikeat_kirjaimet):
-                    print("Voitit Pelin, GG!")
-                    print(f"Oikea sana: {self.oikea_sana.lower()}")        
+                    print(f"Oikea sana: {self.oikea_sana.lower()}")   
+                    print("Voitit Pelin, GG!")     
                     return
                 
             elif len(kirjain) > 1: #Jos arvaa sanaa
                 if kirjain.lower() == self.oikea_sana.lower():
-                    print("Voitit Pelin, GG!")
-                    print(f"Oikea sana: {self.oikea_sana.lower()}")       
+                    print(f"Oikea sana: {self.oikea_sana.lower()}")    
+                    print("Voitit Pelin, GG!")   
                     return
                 else:
                     self.vaara_vastaus(kirjain.lower())
