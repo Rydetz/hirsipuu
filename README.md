@@ -12,9 +12,12 @@ Peli päättyy, kun pelaaja arvaa sanan oikein tai arvaa väärän kirjaimen 6 k
 Valtteri Poimala ja Luca Tanriverdi Tivi25A
 
 # Työnjako
-# Valtteri:
+Valtteri
+
 Luonut tiedostot, tehnyt main.py tiedoston rungon, Hirsipuu luokan ja koodannut Hirsipuu luokan funktioita.
-# Luca:
+
+Luca
+
 Suunnittellut hirsipuun toteutuksen, kirjoittanut README tiedoston, etsinyt ja keksinyt sanoja sanat.csv tiedostoon ja koodannut Hirsipuu luokan funktioita.
 
 Molemmat myös korjasivat bugeja ja muokkasivat koodia projektin aikana.
