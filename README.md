@@ -13,7 +13,8 @@ Valtteri Poimala ja Luca Tanriverdi Tivi25A
 
 # Työnjako
 # Valtteri:
-Luonut tiedostot, tehnyt main.py tiedoston rungon, Hirsipuu luokan ja VaaraVastaus luokan.
+Luonut tiedostot, tehnyt main.py tiedoston rungon, Hirsipuu luokan ja koodannut Hirsipuu luokan funktioita.
 # Luca:
-Suunnittellut hirsipuun toteutuksen, kirjoittanut README tiedoston, etsinyt ja keksinyt sanoja sanat.csv tiedostoon ja tehnyt OikeaVastaus luokan.
+Suunnittellut hirsipuun toteutuksen, kirjoittanut README tiedoston, etsinyt ja keksinyt sanoja sanat.csv tiedostoon ja koodannut Hirsipuu luokan funktioita.
+
 Molemmat myös korjasivat bugeja ja muokkasivat koodia projektin aikana.
